@@ -1,10 +1,12 @@
 import Header from "./components/About";
+import Home from "./components/Home";
 
 function App() {
   return (
-      <div className="bg-darkBlue">
+      <body className="bg-darkBlue text-white">
         <Header/>
-      </div>
+        <Home/>
+      </body>
   );
 }
 
