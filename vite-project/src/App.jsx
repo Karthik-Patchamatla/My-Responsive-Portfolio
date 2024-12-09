@@ -1,7 +1,9 @@
+import Header from "./components/About";
+
 function App() {
   return (
-      <div>
-        <p>hello karthik</p>
+      <div className="bg-darkBlue">
+        <Header/>
       </div>
   );
 }
