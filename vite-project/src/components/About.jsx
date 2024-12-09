@@ -1,110 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import skills from '../data/skills';
 
-const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
+const About = () => {
   return (
-    <header className="flex justify-between items-center py-4 px-4 md:px-8 lg:px-16 lg:mx-40 relative">
-      {/* Logo */}
-      <h1 className="text-2xl font-bold text-[#7562e0] transition-transform hover:text-white cursor-pointer">
-        Karthik Varma
-      </h1>
-
-      {/* Hamburger / Close Button */}
-      <button
-        className="block md:hidden text-white focus:outline-none"
-        onClick={toggleMenu}
-      >
-        {menuOpen ? (
-          // Close (X mark) icon
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
-        ) : (
-          // Hamburger icon
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        )}
-      </button>
-
-      {/* Navigation Links */}
-      <ul
-        className={`md:flex text-[15px] font-bold transition-all duration-300 ease-in-out ${
-          menuOpen ? 'block' : 'hidden'
-        } absolute top-16 left-0 w-full bg-[#94a3b8] md:static md:w-auto md:bg-transparent transform ${
-          menuOpen ? 'translateY(0)' : 'translateY(-20px)'
-        }`}
-      >
-        <li className="md:inline-block md:border-none">
-          <a
-            className="block py-4 px-6 text-white hover:text-[#7562e0] text-lg"
-            href="#home"
-            onClick={closeMenu}
-          >
-            Home
-          </a>
-        </li>
-        <li className="md:inline-block md:border-none">
-          <a
-            className="block py-4 px-6 text-white hover:text-[#7562e0] text-lg"
-            href="#about"
-            onClick={closeMenu}
-          >
-            About me
-          </a>
-        </li>
-        <li className="md:inline-block md:border-none">
-          <a
-            className="block py-4 px-6 text-white hover:text-[#7562e0] text-lg"
-            href="#projects"
-            onClick={closeMenu}
-          >
-            Projects
-          </a>
-        </li>
-        <li className="md:inline-block">
-          <a
-            className="block py-4 px-6 text-white hover:text-[#7562e0] text-lg"
-            href="#contact"
-            onClick={closeMenu}
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
-    </header>
+    <section id="about" className="lg:mx-40 px-4 md:px-8 lg:px-16 py-6 md:py-10">
+      <h1 className="text-3xl font-bold text-[#7562e0] mb-6">About Me</h1>
+      <p className="text-lg mb-8">
+        Hi, my name is Karthik Varma Patchamatla. Seeking an opportunity with an esteemed organisation where I can utilise my 
+        skills and enhance learning in the field of work. I am familiar with:
+      </p>
+      <div className="grid grid-cols-4 sm:grid-cols-6 gap-6">
+        {skills.map((skill, index) => (
+          <div key={index} className="flex flex-col items-center">
+            <img className="size-24 sm:size-20 rounded-xl hover:scale-110" src={skill.image} alt={skill.name} />
+            <h3 className="text-lg sm:text-sm font-bold">{skill.name}</h3>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default Header;
+export default About;
