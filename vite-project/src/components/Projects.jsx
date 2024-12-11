@@ -6,7 +6,7 @@ const Projects = () => {
     <section id="projects" className="lg:mx-40 my-10 py-4 px-4 md:px-8 lg:px-16">
       <h1 className="text-4xl font-bold text-[#7562e0] mb-6">Featured Projects</h1>
       <p className="text-lg mb-8">
-        I have worked on many projects over the course of being a Web Developer. Here are some highlights:
+        I have worked on many projects over the course of being a Web & Flutter Developer. Here are some highlights:
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
