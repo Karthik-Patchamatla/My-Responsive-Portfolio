@@ -4,8 +4,15 @@ import nikeapp from '../assets/nikeapp.jpg';
 import arg from '../assets/arg.jpg';
 import herbal from '../assets/herbaldiscoveries.webp';
 import nike from '../assets/nikelandingpageclone.webp';
+import ecommerce from '../assets/ecommerce.jpg';
 
 export default [
+  {
+    title: "Gamer's Haven",
+    description: 'This responsive e-commerce platform, built with the MERN stack and styled with TailwindCSS, lets users browse and buy games, consoles, PC components, and accessories. Key features include a suggestive search bar, detailed product pages, and a user-friendly add-to-cart system.',
+    image: ecommerce,
+    link: 'https://github.com/Karthik-Patchamatla/Gamers-HavenHub',
+  },
   {
     title: 'Clima',
     description: 'A responsive weather forecasting app using Flutter and Dart, featuring real-time weather updates based on user location through Geolocator integration. The app accurately fetches latitude and longitude coordinates to provide temperature readings and weather descriptions, accompanied by intuitive emoji indicators based on temperature. Additionally, implemented a search-by-city feature, enabling users to retrieve weather data for specific locations with a responsive and user-friendly interface.',
