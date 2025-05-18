@@ -10,7 +10,7 @@ const Contact = () => {
       {/* Left Section */}
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-[#7562e0]">Connect with me:</h2>
-        <p className="text-xl font-bold">pkarthikvarma830@gmail.com</p>
+        <p className="text-xl font-bold">karthik.patchamatla@gmail.com</p>
 
         {/* Social Media Section */}
         <div>
